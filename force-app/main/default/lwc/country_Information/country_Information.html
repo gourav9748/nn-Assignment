@@ -1,0 +1,27 @@
+<!--
+* Name            :    Country_Information
+* Description     :    This is the HTML file of Country_Information to show the Country information
+* Created Date    :    [19th Aug, 2024]
+* Created By      :    [Gourav Bhowmik] 
+*
+-->
+<template>
+    <lightning-card  title="Country Information">
+
+        <template if:true={countryId}>
+            <lightning-record-view-form
+                record-id={countryId}
+                object-api-name="Country__c"
+            >
+                <div class="slds-box">
+                    <lightning-output-field field-name="Name"> </lightning-output-field>
+                    <lightning-output-field field-name="Capital_city__c"></lightning-output-field>
+                    <lightning-output-field field-name="Country_alpha2code__c"></lightning-output-field>
+                    <lightning-output-field field-name="Country_alpha3code__c"></lightning-output-field>
+                    <lightning-output-field field-name="Region__c"></lightning-output-field>
+                </div>
+            </lightning-record-view-form>
+        </template>
+    </lightning-card>
+    
+</template>
